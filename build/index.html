@@ -1,1 +1,94 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Flappy Bird Clone Landing Page</title><meta name=description content="A brief description of your site"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="shortcut icon" href=/favicon.ico><link rel=apple-touch-icon href=/apple-touch-icon.png><link rel=stylesheet href=css/styles.css></head><body><header><h1>Flappy Bird</h1></header><section class=intro><p>Flap so hard</p></section><section class=features><ul><li><h2>Play in your Browser!</h2><p>The mobile phenomenon now in your browser!</p></li><li><h2>Compete with your friends!</h2><p>Versus mode and tournaments.</p></li><li><h2>Challenge the community!</h2><p>Persistent leaderboards.</p></li></ul></section><section class=call-to-action><a href=# class="action-button shadow animate green">Play Now!</a></section><footer><div class=social><ul><li><a href=#><img src=img/webicon-twitter-m.png alt=Twitter></a></li><li><a href=#><img src=img/webicon-github-m.png></a></li><li><a href=#><img src=img/webicon-mail-m.png></a></li></ul></div><p>&copy 2015, No rights reserved.</p></footer></body></html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Flappy Bird Clone Landing Page</title><meta name=description content="A brief description of your site"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="shortcut icon" href=/favicon.ico><link rel=apple-touch-icon href=/apple-touch-icon.png><style>
+            html {
+              font-family: sans-serif; 
+              -ms-text-size-adjust: 100%; 
+              -webkit-text-size-adjust: 100%; 
+            }
+            body {
+              margin: 0;
+            }
+            footer,
+            header,
+            section{
+              display: block;
+            }
+            a {
+              background-color: transparent;
+            }
+            h1 {
+              font-size: 2em;
+              margin: 0.67em 0;
+            }
+            img {
+              border: 0;
+            }
+            * {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; }
+
+            html {
+              height: 100%;
+              background: -webkit-linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/background.jpeg");
+              background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/background.jpeg");
+              -webkit-background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+              background-size: 100%;
+              background-color: #9FCAFF;
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              color: white;
+              text-align: center; }
+
+            .features {
+              text-align: left;
+              width: 75%;
+              margin: auto; }
+              @media screen and (min-width: 768px) {
+                .features {
+                  width: 50%; } }
+              @media screen and (min-width: 1024px) {
+                .features {
+                  width: 32%; } }
+
+            .call-to-action {
+              -webkit-transform: translateZ(0); }
+
+            ul {
+              list-style-type: none; }
+
+            .social ul {
+              padding: 0; }
+              .social ul li {
+                display: inline-block;
+                margin: 1rem 0.5rem; }
+
+            .animate {
+              transition: all 0.1s;
+              -webkit-transition: all 0.1s; }
+
+            .action-button {
+              padding: 10px 40px;
+              margin: 1rem;
+              border-radius: 10px;
+              font-family: 'Pacifico', cursive;
+              font-size: 25px;
+              color: #FFF;
+              text-decoration: none; }
+
+            .green {
+              background-color: #82BF56;
+              border-bottom: 5px solid #669644;
+              text-shadow: 0px -2px #669644; }
+        </style></head><body><header><h1>Flappy Bird</h1></header><section class=intro><p>Flap so hard</p></section><section class=features><ul><li><h2>Play in your Browser!</h2><p>The mobile phenomenon now in your browser!</p></li><li><h2>Compete with your friends!</h2><p>Versus mode and tournaments.</p></li><li><h2>Challenge the community!</h2><p>Persistent leaderboards.</p></li></ul></section><section class=call-to-action><a href=# class="action-button shadow animate green">Play Now!</a></section><footer><div class=social><ul><li><a href=#><img src=img/webicon-twitter-m.png alt=Twitter></a></li><li><a href=#><img src=img/webicon-github-m.png></a></li><li><a href=#><img src=img/webicon-mail-m.png></a></li></ul></div><p>&copy 2015, No rights reserved.</p></footer><script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = 'css/styles.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script></body></html>
