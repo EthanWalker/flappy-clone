@@ -24,7 +24,7 @@ gulp.task('sass', function() {
 
 // Minify index
 gulp.task('html', function() {
-  return gulp.src('site/index.html')
+  return gulp.src('site/*.html')
     .pipe(minifyHTML())
     .pipe(gulp.dest('build/'));
 });
@@ -32,7 +32,6 @@ gulp.task('html', function() {
 // JavaScript build task, removes whitespace and concatenates all files
 gulp.task('scripts', function() {
   return gulp.src('site/js/*.js')
-    .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./build/js'));
 });
@@ -40,7 +39,6 @@ gulp.task('scripts', function() {
 // Styles build task, concatenates all the files
 gulp.task('styles', function() {
   return gulp.src('site/css/*.css')
-    .pipe(concat('styles.css'))
     .pipe(gulp.dest('build/css'));
 });
 

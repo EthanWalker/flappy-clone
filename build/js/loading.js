@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$("body"),t=[{elements:e,properties:{width:"20%"}},{elements:e,properties:{width:"30%"}},{elements:e,properties:{width:"50%"}},{elements:e,properties:{width:"100%"}},{elements:e,properties:{height:"100%"},options:{complete:function(){$(".wrap").velocity("transition.slideUpIn"),$("html").css({background:"#fff"})}}}];$.Velocity.RunSequence(t)});
