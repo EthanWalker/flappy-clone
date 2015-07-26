@@ -7,6 +7,7 @@ var jshint = require('gulp-jshint');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+var kraken = require('gulp-kraken');
 
 // JavaScript linting task
 gulp.task('jshint', function() {
@@ -49,6 +50,15 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('kraken', function () {
+    gulp.src('build/img/*')
+        .pipe(kraken({
+            key: '5ba80d0e30c88164979153e72bb629ac',
+            secret: '078f49f43f7e4d8e501ca3279067853fa5a78e70',
+            lossy: true
+        }));
+});
+
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('site/js/*.js', ['jshint']);
@@ -56,7 +66,7 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['jshint', 'sass', 'watch']);
+gulp.task('default', ['jshint', 'sass', 'watch', 'kraken']);
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images' , 'kraken']);

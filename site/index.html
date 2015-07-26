@@ -144,6 +144,20 @@
         <p>&copy 2015, No rights reserved.</p>
     </footer>
     <script>
+          window.addEventListener('load', function() {
+          var now = new Date().getTime();
+          console.log('Perceived loading time (in milliseconds): ' + (now - performance.timing.responseStart));
+          console.log('Backend: ' + (performance.timing.responseStart - performance.timing.requestStart));
+          console.log('Frontend: ' + (performance.timing.domComplete - performance.timing.domLoading));
+          var resourceArray = window.performance.getEntriesByType("resource");
+          for(var i = 0; i < resourceArray.length; i++)
+          {
+            console.log(resourceArray[i].name + " duration: " + resourceArray[i].duration);
+          }
+          });
+    </script>
+
+    <script>
       var cb = function() {
         var l = document.createElement('link'); l.rel = 'stylesheet';
         l.href = 'css/styles.css';
